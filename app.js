@@ -1,5 +1,6 @@
 // script.js
 
+// Countdown Timer for 2025 in Bangladesh Time (GMT+6)
 function startCountdown() {
     const timerElements = {
         days: document.getElementById("days"),
@@ -10,8 +11,10 @@ function startCountdown() {
 
     function updateTimer() {
         const now = new Date();
-        const newYear = new Date(2025, 0, 1);
-        const timeDiff = newYear - now;
+        const bdTimeOffset = 6 * 60 * 60 * 1000; // GMT+6 offset in milliseconds
+        const bangladeshTime = new Date(now.getTime() + bdTimeOffset - now.getTimezoneOffset() * 60 * 1000);
+        const newYear = new Date(2025, 0, 1); // Midnight on January 1, 2025
+        const timeDiff = newYear - bangladeshTime;
 
         const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
         const hours = Math.floor((timeDiff / (1000 * 60 * 60)) % 24);
