@@ -1,0 +1,55 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #222;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.container {
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #f39c12;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin: 20px 0;
+    color: #f1c40f;
+}
+
+.countdown {
+    font-size: 1.8rem;
+    margin: 20px 0;
+    padding: 10px;
+    background: #333;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+#timer {
+    font-size: 2rem;
+    color: #27ae60;
+}
+
+#fireworks {
+    font-size: 2rem;
+    margin-top: 20px;
+    display: none;
+    color: #e74c3c;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#video-chat iframe {
+    margin-top: 20px;
+    border-radius: 8px;
+}
