@@ -5,19 +5,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Year BBQ Party</title>
+    <title>New Year 2025 Celebration</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="main">
         <header>
-            <img src="assets/logo.png" alt="BBQ Party Logo" id="logo">
-            <h1>🎉 New Year BBQ Party 2024 🎉</h1>
+            <h1 id="main-title">🎉 New Year BBQ Party 2025 🎉</h1>
         </header>
 
-        <!-- Countdown Clock -->
+        <!-- Countdown Section -->
         <section id="countdown">
-            <h2>Countdown to New Year:</h2>
+            <h2>Countdown to New Year 2025:</h2>
             <div id="timer">
                 <div class="time-box">
                     <span id="days" class="time">00</span>
@@ -38,21 +37,14 @@
             </div>
         </section>
 
-        <!-- Video Chat -->
-        <section id="video-chat">
-            <h2>Join the Party Room</h2>
-            <iframe
-                id="jitsi-container"
-                src="https://meet.jit.si/NewYearBBQParty"
-                allow="camera; microphone; fullscreen"
-                style="border: 0; width: 100%; height: 500px; border-radius: 10px;">
-            </iframe>
+        <!-- New Year Title -->
+        <section id="new-year-title" style="display: none;">
+            <h1>🎆 HAPPY NEW YEAR 2025! 🎆</h1>
         </section>
 
-        <!-- Fireworks Canvas -->
+        <!-- Fireworks -->
         <canvas id="fireworks"></canvas>
     </div>
     <script src="app.js"></script>
 </body>
 </html>
-
