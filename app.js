@@ -9,19 +9,20 @@ function startCountdown() {
         seconds: document.getElementById("seconds")
     };
 
+    // Set New Year 2025 target time in Bangladesh
+    const targetTime = new Date("2025-01-01T00:00:00+06:00");
+
     function updateTimer() {
         const now = new Date();
-        const bdTimeOffset = 6 * 60 * 60 * 1000; // GMT+6 offset in milliseconds
-        const bangladeshTime = new Date(now.getTime() + bdTimeOffset - now.getTimezoneOffset() * 60 * 1000);
-        const newYear = new Date(2025, 0, 1); // Midnight on January 1, 2025
-        const timeDiff = newYear - bangladeshTime;
-
-        const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((timeDiff / (1000 * 60 * 60)) % 24);
-        const minutes = Math.floor((timeDiff / (1000 * 60)) % 60);
-        const seconds = Math.floor((timeDiff / 1000) % 60);
+        const currentTimeInBangladesh = new Date(now.toLocaleString("en-US", { timeZone: "Asia/Dhaka" }));
+        const timeDiff = targetTime - currentTimeInBangladesh;
 
         if (timeDiff > 0) {
+            const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeDiff / (1000 * 60 * 60)) % 24);
+            const minutes = Math.floor((timeDiff / (1000 * 60)) % 60);
+            const seconds = Math.floor((timeDiff / 1000) % 60);
+
             timerElements.days.textContent = days.toString().padStart(2, "0");
             timerElements.hours.textContent = hours.toString().padStart(2, "0");
             timerElements.minutes.textContent = minutes.toString().padStart(2, "0");
