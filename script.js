@@ -10,7 +10,7 @@ function startCountdown() {
 
     function updateTimer() {
         const now = new Date();
-        const newYear = new Date(now.getFullYear() + 1, 0, 1);
+        const newYear = new Date(2025, 0, 1);
         const timeDiff = newYear - now;
 
         const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
@@ -18,13 +18,15 @@ function startCountdown() {
         const minutes = Math.floor((timeDiff / (1000 * 60)) % 60);
         const seconds = Math.floor((timeDiff / 1000) % 60);
 
-        timerElements.days.textContent = days.toString().padStart(2, "0");
-        timerElements.hours.textContent = hours.toString().padStart(2, "0");
-        timerElements.minutes.textContent = minutes.toString().padStart(2, "0");
-        timerElements.seconds.textContent = seconds.toString().padStart(2, "0");
-
-        if (timeDiff <= 0) {
+        if (timeDiff > 0) {
+            timerElements.days.textContent = days.toString().padStart(2, "0");
+            timerElements.hours.textContent = hours.toString().padStart(2, "0");
+            timerElements.minutes.textContent = minutes.toString().padStart(2, "0");
+            timerElements.seconds.textContent = seconds.toString().padStart(2, "0");
+        } else {
             clearInterval(timerInterval);
+            document.getElementById("countdown").style.display = "none";
+            document.getElementById("new-year-title").style.display = "block";
             startFireworks();
         }
     }
@@ -76,4 +78,5 @@ function startFireworks() {
     updateFireworks();
 }
 
+// Initialize
 window.onload = startCountdown;
