@@ -2,7 +2,7 @@
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #1e3c72, #2a5298, #0f2027);
+    background: linear-gradient(135deg, #1a237e, #0d47a1, #283593);
     background-size: 400% 400%;
     animation: gradientAnimation 15s ease infinite;
     color: white;
@@ -11,10 +11,6 @@ body {
 
 header {
     padding: 20px;
-}
-
-#logo {
-    max-width: 100px;
 }
 
 h1, h2 {
@@ -58,10 +54,6 @@ h1, h2 {
     color: #ffffff;
 }
 
-#jitsi-container {
-    margin-top: 30px;
-}
-
 canvas#fireworks {
     position: fixed;
     top: 0;
@@ -70,6 +62,13 @@ canvas#fireworks {
     height: 100%;
     pointer-events: none;
     z-index: 9999;
+}
+
+#new-year-title {
+    margin: 50px auto;
+    font-size: 3rem;
+    color: #ffd700;
+    text-shadow: 2px 2px 15px gold;
 }
 
 @keyframes gradientAnimation {
